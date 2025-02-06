@@ -1,11 +1,10 @@
 package ReturnTypeWithPatameterArray.pkg;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-// Q1.Wap to input an array and print it.
+//Q4.Wap to input an array and find sum of its 1st and 2nd element.
 
-public class Question01 {
+public class Question04 {
 	
 	int [] inputArray()
 	{
@@ -15,29 +14,33 @@ public class Question01 {
 		 
 		 int arr[] = new int[size];
 		 
+		 int arr1[] = new int[2];
+		 int x = 0;
 		 System.out.println("Enter the array elements :");
 		 
 		 for (int  i=0;i<arr.length;i++)
 		 {
+			 
 			 arr[i] = sc.nextInt();
 		 }
 		 
-		 return arr;
+		 for (int  i=0;i<arr.length;i++)
+		 {
+			 if (i==0 || i == arr.length-1)
+			 {
+				 arr1[x++] = arr[i];
+			 }
+			 
+		 }
+		 
+		 return arr1;
 	}
 	
-	int [] returnArray(int a[])
-	{
-		 
-		 return a;
+	public static void main(String[] args) {
+		Question04 obj = new Question04();
+		int a[] = obj.inputArray();
+		
+		System.out.println("sum of fist and last element is: "+(a[0]+a[1]));
 	}
 
-	public static void main(String[] args) {
-		Question01 obj = new Question01();
-		int a[] = obj.inputArray();
-		int k[] = obj.returnArray(a);
-		
-		System.out.println(Arrays.toString(k));
-		
-	}
-	
 }

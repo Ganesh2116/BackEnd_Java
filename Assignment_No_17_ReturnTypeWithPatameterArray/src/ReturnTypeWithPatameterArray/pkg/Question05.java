@@ -1,13 +1,12 @@
 package ReturnTypeWithPatameterArray.pkg;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-// Q1.Wap to input an array and print it.
+// Q5.Wap to input an array and find sum.
 
-public class Question01 {
+public class Question05 {
 	
-	int [] inputArray()
+	int inputArray()
 	{
 		Scanner sc = new Scanner(System.in);
 		 System.out.println("Enter the array size :");
@@ -15,29 +14,29 @@ public class Question01 {
 		 
 		 int arr[] = new int[size];
 		 
+		 int sum =0;
 		 System.out.println("Enter the array elements :");
 		 
 		 for (int  i=0;i<arr.length;i++)
 		 {
+			 
 			 arr[i] = sc.nextInt();
 		 }
 		 
-		 return arr;
+		 for (int  i=0;i<arr.length;i++)
+		 {
+			sum += arr[i]; 
+		 }
+		 
+		 return sum;
 	}
 	
-	int [] returnArray(int a[])
-	{
-		 
-		 return a;
+	public static void main(String[] args) {
+		Question05 obj = new Question05();
+		int result = obj.inputArray();
+		
+		System.out.println("Sum of array is "+result);
+		
 	}
 
-	public static void main(String[] args) {
-		Question01 obj = new Question01();
-		int a[] = obj.inputArray();
-		int k[] = obj.returnArray(a);
-		
-		System.out.println(Arrays.toString(k));
-		
-	}
-	
 }
