@@ -7,17 +7,12 @@ public class Question05 {
 	String arrayInput(int a,int b)
 	{
 		int arr[] = {26, 1, 67, 45, 1, 78, 54, 34, 10, 1, 34};
-		int abcount = 0;
 		int acount = 0;
 		int bcount = 0;
 		
 		for (int i=0;i<arr.length;i++)
 		{
-			if (a == arr[i] || b == arr[i])
-			{
-				abcount++;
-			}
-			else if (a == arr[i])
+			if (a == arr[i])
 			{
 				acount++;
 			}
@@ -27,7 +22,7 @@ public class Question05 {
 			}
 		}
 		
-		if (abcount >= 2)
+		if (acount >=1 && bcount >=1)
 		{
 			return "Both are persent in array .";
 		}
@@ -35,7 +30,7 @@ public class Question05 {
 		{
 			return "Only A are persent in array .";
 		}
-		else if (bcount <=1)
+		else if (bcount >=1)
 		{
 			return "Only B are persent in array.";
 		}
@@ -47,7 +42,7 @@ public class Question05 {
 	
 	public static void main(String[] args) {
 		Question05 obj = new Question05();
-		String str = obj.arrayInput(1, 0);
+		String str = obj.arrayInput(100, 0);
 		
 		System.out.println(str);
 		
