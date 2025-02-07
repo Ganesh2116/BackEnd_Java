@@ -1,11 +1,11 @@
-package ReturnTypeWithPatameterArray.pkg;
+package Assignment01.pkg;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-// Q1.Wap to input an array and print it.
+//Q3.Wap to input an array and print its 1st and last element.
 
-public class Question01 {
+public class Question03 {
 	
 	int [] inputArray()
 	{
@@ -15,29 +15,33 @@ public class Question01 {
 		 
 		 int arr[] = new int[size];
 		 
+		 int arr1[] = new int[2];
+		 int x = 0;
 		 System.out.println("Enter the array elements :");
 		 
 		 for (int  i=0;i<arr.length;i++)
 		 {
+			 
 			 arr[i] = sc.nextInt();
 		 }
 		 
-		 return arr;
+		 for (int  i=0;i<arr.length;i++)
+		 {
+			 if (i==0 || i == arr.length-1)
+			 {
+				 arr1[x++] = arr[i];
+			 }
+			 
+		 }
+		 
+		 return arr1;
 	}
 	
-	int [] returnArray(int a[])
-	{
-		 
-		 return a;
+	public static void main(String[] args) {
+		Question03 obj = new Question03();
+		int a[] = obj.inputArray();
+		
+		System.out.println("first and last elements is :"+Arrays.toString(a));
 	}
 
-	public static void main(String[] args) {
-		Question01 obj = new Question01();
-		int a[] = obj.inputArray();
-		int k[] = obj.returnArray(a);
-		
-		System.out.println(Arrays.toString(k));
-		
-	}
-	
 }

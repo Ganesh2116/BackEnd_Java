@@ -1,4 +1,4 @@
-package ReturnTypeWithPatameterArray.pkg;
+package Assignment01.pkg;
 
 import java.util.Scanner;
 
