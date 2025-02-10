@@ -1,7 +1,5 @@
 package Assignment04.pkg;
 
-import java.util.Arrays;
-
 // Q7.Write a java program to find prime number between an array of element.
 
 public class Question07 {
