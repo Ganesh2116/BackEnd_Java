@@ -15,8 +15,8 @@ class ClassChild extends ClassParent
 	void print()
 	{
 		String name = "rushi";
-		System.out.println("This is my nane:"+super.name);
-		System.out.println("This is my brother nane:"+name);
+		System.out.println("This is my name:"+super.name);
+		System.out.println("This is my brother name:"+name);
 	}
 }
 
