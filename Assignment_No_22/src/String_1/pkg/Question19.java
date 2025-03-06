@@ -7,16 +7,7 @@ public class Question19 {
 	void occurrence()
 	{
 		String str = "hello world hello java hello program hello";
-		int occCount =0 ;
-		for (int i=1;i<str.length();i++)
-		{
-			if (str.charAt(0) == str.charAt(i))
-			{
-				occCount++;
-			}
-		}
-		
-		System.out.println("Occurrance is : "+occCount);
+		System.out.println("occurrence of character is:"+str.indexOf("e"));
 	}
 	
 	public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package String_1.pkg;
+package StringQuestions.pkg;
 
-//9.Write a Java program to find the occurence of first word in the string.
+// Write a program to find the first occurrence of a character in a string.
 
-public class Question09{
+public class Question13 {
 	
 	void occurranceChar(String str,char ch)
 	{
@@ -10,7 +10,7 @@ public class Question09{
 	}
 	
 	public static void main(String[] args) {
-		Question09 obj = new Question09();
+		Question13 obj = new Question13();
 		obj.occurranceChar("this is string", 's');
 
 	}
