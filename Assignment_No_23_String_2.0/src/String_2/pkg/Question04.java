@@ -1,34 +1,54 @@
 package String_2.pkg;
 
+//Q4.Wap enter a string and sort each word of string in accending and decending order by the length of each word.
+
+
 public class Question04 {
     
     void accendingDecendingOrder(String str) {
         String words[] = str.split(" ");
         
        
-        for (int i = 0; i < words.length - 1; i++) {
-            for (int j = 0; j < words.length - i - 1; j++) {
-                if (words[j].length() > words[j + 1].length()) {
-                    String temp = words[j];
-                    words[j] = words[j + 1];
-                    words[j + 1] = temp;
+        for (int i = 0; i < words.length; i++) 
+        {
+            for (int j = i+1; j < words.length; j++) 
+            {
+                if (words[i].length() > words[j].length()) 
+                {
+                    String temp = words[i];
+                    words[i] = words[j];
+                    words[j] = temp;
                 }
             }
         }
-        System.out.println("Words sorted by length in ascending order: " + String.join(" ", words));
+       
+        System.out.println("Accending order :");
+        for (int i = 0; i < words.length; i++) 
+        {
+            System.out.print(words[i]+" ");
+        }
         
-      
-        for (int i = 0; i < words.length - 1; i++) {
-            for (int j = 0; j < words.length - i - 1; j++) {
-                if (words[j].length() < words[j + 1].length()) {
-                    String temp = words[j];
-                    words[j] = words[j + 1];
-                    words[j + 1] = temp;
+        for (int i = 0; i < words.length; i++) 
+        {
+            for (int j = i+1; j < words.length; j++) 
+            {
+                if (words[i].length() < words[j].length()) 
+                {
+                    String temp = words[i];
+                    words[i] = words[j];
+                    words[j] = temp;
                 }
             }
         }
-        System.out.println("Words sorted by length in descending order: " + String.join(" ", words));
-    }
+       
+        System.out.println("\nDecending order :");
+        for (int i = 0; i < words.length; i++) 
+        {
+            System.out.print(words[i]+" ");
+        }
+        }
+        
+    
     
     public static void main(String[] args) {
         Question04 obj = new Question04();
