@@ -1,4 +1,4 @@
-package StringQuestionReturnType.pkg;
+package StringQuestionReturnTypeAssignment02.pkg;
 
 //9.Write a Java program to find the occurence of first word in the string.
 

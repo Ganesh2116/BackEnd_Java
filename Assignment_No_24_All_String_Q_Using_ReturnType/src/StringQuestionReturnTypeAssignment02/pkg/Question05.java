@@ -1,4 +1,4 @@
-package StringQuestionReturnType.pkg;
+package StringQuestionReturnTypeAssignment02.pkg;
 
 import java.util.Scanner;
 

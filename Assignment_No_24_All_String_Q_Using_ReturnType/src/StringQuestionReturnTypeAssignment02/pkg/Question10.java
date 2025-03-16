@@ -1,4 +1,4 @@
-package StringQuestionReturnType.pkg;
+package StringQuestionReturnTypeAssignment02.pkg;
 
 // 10.Wap to show an example of method overloading and method overriding. using string.
 

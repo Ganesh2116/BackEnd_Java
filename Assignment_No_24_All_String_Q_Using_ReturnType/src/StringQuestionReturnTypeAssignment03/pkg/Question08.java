@@ -1,4 +1,4 @@
-package String_2.pkg;
+package StringQuestionReturnTypeAssignment03.pkg;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Question08 {
 	
-	 static char getMostRepeatedCharacter(String str) {
+	 char getMostRepeatedCharacter(String str) {
 	        if (str.isEmpty()) return '\0'; 
 
 	        int[] freq = new int[256];
@@ -30,11 +30,12 @@ public class Question08 {
 	
 
 	    public static void main(String[] args) {
+	    	Question08 obj = new Question08();
 	        Scanner sc = new Scanner(System.in);
 	        System.out.print("Enter a string: ");
 	        String str = sc.nextLine();
 	       
-	        char mostRepeatedChar = getMostRepeatedCharacter(str);
+	        char mostRepeatedChar = obj.getMostRepeatedCharacter(str);
 
 	        if (mostRepeatedChar != '\0') {
 	            System.out.println("Most repeated character: " + mostRepeatedChar);
@@ -43,3 +44,4 @@ public class Question08 {
 	        }
 	    }
 }
+
